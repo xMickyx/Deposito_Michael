@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    // Dichiarazione delle variabili
+    char città [60];
+    float numero1;
+    float numero2;
+    float numero3;
+    float media;
+    
+    // Chiede all'utente di inserire il nome della sua città 
+    printf("Inserisci il nome della tua città:");
+    scanf("%s", città);
+    
+    // Chiede all'utente di inserire il primo numero decimale
+    printf("Inserire un numero decimale:");
+    scanf("%f", &numero1);
+    
+    // Chiede all'utente di inserire il secondo numero decimale
+    printf("Inserire un secondo numero decimale:");
+    scanf("%f", &numero2);
+    
+    // Chiede all'utente di inserire il terzo numero decimale
+    printf("Inserire un terzo numero decimale:");
+    scanf("%f", &numero3);
+    
+    media = (numero1+numero2+numero3)/3;
+    
+    // Mostra la città e la media dei numeri inseriti
+    printf("La media di %s è: %.3f\n",città,media);
+    
+    return 0;
+}
+    
