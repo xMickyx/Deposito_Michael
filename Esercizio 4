@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+int main()
+{
+    // Dichiarazione Variabili
+    int a, b, c, x;
+    
+    // L'utente inserisce il primo numero intero
+    printf("Inserisci un numero intero:");
+    scanf("%d", &a);
+    
+    // L'utente inserisce il secondo numero intero
+    printf("Inserisci il secondo numero intero:");
+    scanf("%d", &b);
+    
+    // L'utente inserisce il terzo numero intero
+    printf("Inserisci il terzo numero intero:");
+    scanf("%d", &c);
+    
+    // L'utente inserisce il valore intero x
+    printf("Inserisci un valore intero x:");
+    scanf("%d", &x);
+    
+    // Calcola e stampa le operazioni somma e moltiplicazione
+    printf("La somma è : %d\n", a+b);
+    printf("Il prodotto è : %d\n", b*c);
+   
+    // Mostrare se la somma calcolata è minore o maggiore di x
+    if(a+b > x) {
+    printf("La somma è maggiore di x.\n");
+    }else{
+    printf("La somma è minore di x.\n");
+    }
+    
+    // Mostrare se il prodotto calcolato è maggiore o minore di x
+    if(a*b < x){
+    printf("Il prodotto è minore di x.\n");
+    }else{
+    printf("Il prodotto è maggiore di x.\n");
+    }
+    
+    // Verificare se almeno un numero è negativo
+    if (a < 0 || b < 0 || c < 0) {
+    printf("Almeno uno dei due numeri è negativo. \n");
+    }else{
+    printf("Nessuno dei due numeri è negativo. \n");    
+    }
+    
+    // Verificare se tutti i numeri sono diversi da zero
+    if (a!=0 && b!=0 && c!=0) {
+    printf("Tutti i numeri sono diversi da zero\n");
+    }else{
+    printf("Almeno un numero è uguale a zero\n");
+    }
+    
+    // Verificare che nessuno dei numeri sia uguale a 100
+    if(!(a--100 || b--100 || c--100)) {
+    printf("Almeno un numero è uguale a 100\n");
+    }else{
+    printf("Nessuno dei numeri è uguale a 100\n");
+    }
+
+    return 0;
+}
