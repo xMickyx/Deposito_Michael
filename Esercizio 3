@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+    // Dichiarazione Variabili
+    int a, b;
+    
+    // L'utente inserisce il primo numero intero
+    printf("Inserisci un numero intero:");
+    scanf("%d", &a);
+    
+    // L'utente inserisce il secondo numero intero
+    printf("Inserisci un altro numero intero:");
+    scanf("%d", &b);
+    
+    // Definire le operazioni
+    int somma = a+b;
+    int diff = a-b;
+    int prod = a*b;
+    int quoz = a/b;
+    int resto = a%b;
+    
+    // Calcola e stampa le operazioni
+    printf("La somma è : %d\n",somma);
+    printf("La differenza è: %d\n",diff);
+    printf("Il prodotto è : %d\n",prod);
+    printf("Il quoziente è : %d\n",quoz);
+    printf("Il resto è : %d\n",resto);
+    
+    // Mostrare se i numeri sono maggiori di zero
+    if(a>0 && b>0) {
+    printf("I numeri sono maggiori di zero.\n");
+    }else{
+    printf("Almeno un numero non è maggiore di zero.\n");
+    }
+    
+    // Mostrare se almeno un numero è pari
+    if (a % 2 ==0 || b % 2 ==0) {
+    printf("Almeno uno dei due numeri è pari. \n");
+    }else{
+    printf("Nessuno dei due numeri è pari. \n");    
+}
+    return 0;
+}
