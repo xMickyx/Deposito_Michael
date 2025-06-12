@@ -54,10 +54,10 @@ int main()
     }
     
     // Verificare che nessuno dei numeri sia uguale a 100
-    if(!(a--100 || b--100 || c--100)) {
-    printf("Almeno un numero è uguale a 100\n");
-    }else{
+    if(!(a==100 || b==100 || c==100)) {
     printf("Nessuno dei numeri è uguale a 100\n");
+    }else{
+    printf("Almeno un numero è uguale a 100\n");
     }
 
     return 0;
