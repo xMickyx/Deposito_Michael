@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    // Definire la variabile intera
+    int num;
+    
+    // Inserire un numero intero
+    printf("Inserisci un numero intero: ");
+    scanf("%d", &num );
+    
+    // Verifica se il numero è positivo, negativo o uguale a zero
+    if (num>0){
+    printf("Il numero è positivo\n");
+    if (num>100){
+    printf("WOW\n");
+    }
+    }else if (num<0){
+    printf("Il numero è negativo\n");
+    if (num<-100){
+    printf("-WOW\n");
+    }
+    
+    }else {
+    printf("Il numero è uguale a zero\n");
+    }
+    return 0;
+    }
