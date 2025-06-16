@@ -26,6 +26,7 @@ int main()
     // Il numero non soddisfa le condizioni precedenti
     }else{
     printf("Il numero non soddisfa le condizioni precedenti\n");
+    // Il numero è anche diverso da zero
     if(num!=0){
     printf("Il numero è diverso da zero\n");
     }
