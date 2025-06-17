@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdbool.h> // Necessario per usare il tipo bool
+
+int main() {
+    int numero;
+    bool continua = true; // Variabile booleana di controllo
+    int somma =0;    
+    
+
+    while (continua) {
+        printf("Inserisci un numero (0 per terminare): ");
+        scanf("%d", &numero);
+
+        if (numero == 0) {
+            continua = false; // Interrompe il ciclo
+        } else (numero >0); {
+            somma = somma + numero;
+        }
+    }
+    printf("Ciclo terminato!\n");
+    printf("La somma dei numeri inseriti è: %d\n", somma);
+    return 0;
+}
