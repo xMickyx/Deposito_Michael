@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+// Definire le due funzioni
+int quadrato (int x);
+int maggiore (int x, int y);
+
+// Implementare le due funzioni
+int quadrato (int x){
+return x*x; }
+
+int maggiore (int x, int y){
+    if (x>y){
+        return x;
+    } else {
+        return y;
+    }
+}
+
+int main()
+{
+    // Dichiarare le variabili
+   int a;
+   int b;
+   int q;
+   int m;
+   
+   // L'utente sceglie due numeri da inserire
+   printf("Inserisci il primo numero intero: ");
+   scanf("%d", &a);
+   printf("Inserisci il secondo numero intero: ");
+   scanf("%d", &b);
+   
+   // Mostra il quadrato di ciascun numero
+   q= quadrato(a);
+   printf("Il quadrato di %d è: %d \n", a, q);
+   q= quadrato(b);
+   printf("Il quadrato di %d è: %d \n", b, q);
+   
+   // Mostra quale dei due quadrati è maggiore
+   m = maggiore(a,b);
+   printf("Il numero maggiore è: %d", m);
+   
+    return 0;
+}
