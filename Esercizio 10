@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+   int numeri;
+   int valore;
+   int arr[50];
+   int somma =0;
+   int i;
+   
+   // L'utente inserisce il numerico di valori
+   printf("Quanti numeri vuoi inserire? (max 50): ");
+   scanf("%d", &numeri);
+   
+   // Limitare il range di valori disponibili
+   if(numeri>50 || numeri<0){
+     printf("Il numerico inserito non è valido");
+     return 1;
+   }
+   // L'utente inserisce i numeri uno alla volta
+   for(i=0; i<numeri; i++){
+   printf("Inserisci un numero alla volta: ");
+   scanf("%d", &arr[i]);
+   }
+    // L'utente inserisce il valore da cercare in memoria
+    printf("Quale valore vuoi cercare?");
+    scanf("%d", &valore);
+  
+    for(i=0; i<numeri; i++){
+      if(arr[i]==valore){
+          somma++;
+       printf("Il valore %d è stato inserito %d volte\n", valore, somma);
+      }else{
+       printf("Il valore %d non è stato inserito\n", valore);
+    }}
+    return 0;
+}
