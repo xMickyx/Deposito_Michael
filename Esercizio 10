@@ -25,7 +25,8 @@ int main()
     // L'utente inserisce il valore da cercare in memoria
     printf("Quale valore vuoi cercare?");
     scanf("%d", &valore);
-  
+
+    // Verifica se il valore è stato inserito e ne calcola il numero di volte
     for(i=0; i<numeri; i++){
       if(arr[i]==valore){
           somma++;
