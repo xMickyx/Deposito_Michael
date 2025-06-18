@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+   
+   // Dichiarazione delle variabili
+   int x;
+   int y;
+   int somma;
+   int *px = &x;
+   int *py = &y;
+   int *pz;
+   
+   // L'utente inserisce due numeri interi
+   printf("Inserisci un numero intero: ");
+   scanf("%d", &x);
+   
+   printf("Inserisci un secondo numero intero: ");
+   scanf("%d", &y);
+   
+   // Mostra le variabili inizializzate
+   printf("La variabile x è: %d \n", x);
+   printf("La variabile y è: %d \n", y);
+   
+   // Scambia il valore delle due variabili tramite i puntatori
+   *pz = *px;
+   *px = *py;
+   *py = *pz;
+   
+   // Mostra le variabili scambiate
+   printf("La variabile x è diventata: %d \n", *px);
+   printf("La variabile y è diventata: %d \n", *pz);
+   
+   // Somma i due numeri usando i puntatori
+   somma = *px + *pz;
+   printf("La somma tra i due puntatori è: %d \n", somma);
+   
+   //Determina quale numero è maggiore
+   if (*px > *pz){
+       printf("La variabile y è maggiore di x");
+   }else{
+       printf("La variabile x è maggiore di y");
+   }
+   
+    return 0;
+}
