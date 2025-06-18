@@ -19,10 +19,7 @@ int maggiore (int x, int y){
 int main()
 {
     // Dichiarare le variabili
-   int a;
-   int b;
-   int q;
-   int m;
+   int a, b, q1, q2, m;
    
    // L'utente sceglie due numeri da inserire
    printf("Inserisci il primo numero intero: ");
@@ -31,14 +28,14 @@ int main()
    scanf("%d", &b);
    
    // Mostra il quadrato di ciascun numero
-   q= quadrato(a);
-   printf("Il quadrato di %d è: %d \n", a, q);
-   q= quadrato(b);
-   printf("Il quadrato di %d è: %d \n", b, q);
+   q1= quadrato(a);
+   printf("Il quadrato di %d è: %d \n", a, q1);
+   q2= quadrato(b);
+   printf("Il quadrato di %d è: %d \n", b, q2);
    
    // Mostra quale dei due quadrati è maggiore
-   m = maggiore(a,b);
-   printf("Il numero maggiore è: %d", m);
+   m = maggiore(q1,q2);
+   printf("Il quadrato maggiore è: %d", m);
    
     return 0;
 }
