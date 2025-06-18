@@ -9,7 +9,7 @@ int main(void) {
    int somma;
    int *px = &x;
    int *py = &y;
-   int *pz;
+   int pz;
    
    // L'utente inserisce due numeri interi
    printf("Inserisci un numero intero: ");
@@ -23,23 +23,25 @@ int main(void) {
    printf("La variabile y è: %d \n", y);
    
    // Scambia il valore delle due variabili tramite i puntatori
-   *pz = *px;
+   pz = *px;
    *px = *py;
-   *py = *pz;
+   *py = pz;
    
    // Mostra le variabili scambiate
    printf("La variabile x è diventata: %d \n", *px);
-   printf("La variabile y è diventata: %d \n", *pz);
+   printf("La variabile y è diventata: %d \n", *py);
    
    // Somma i due numeri usando i puntatori
-   somma = *px + *pz;
+   somma = *px + *py;
    printf("La somma tra i due puntatori è: %d \n", somma);
    
    //Determina quale numero è maggiore
-   if (*px > *pz){
+   if (*px > *py){
+       printf("La variabile x è maggiore di y");
+   }else if(*px < *py){
        printf("La variabile y è maggiore di x");
    }else{
-       printf("La variabile x è maggiore di y");
+       printf("La variabile x è uguale a y");
    }
    
     return 0;
