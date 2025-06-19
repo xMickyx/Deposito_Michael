@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+// Definire lo struct
+struct Macchina{
+    char modello [30];
+    int anno;
+};
+
+int main()
+{
+   //Definire la variabile
+   struct Macchina mac[50];
+   int num, i;
+   
+   // L'utente decide quante macchine vuole inserire
+   printf("Quante macchine vuoi inserire?: ");
+   scanf("%d" , &num);
+   if(num < 0 || num > 50){
+       printf("Non valido. Max 50");
+   }
+   
+   for(i=0;i<num;i++){
+   printf("Macchina %d\n", i+1);
+   printf("Modello: ");
+   scanf("%30s", mac[i].modello);
+   printf("Anno: ");
+   scanf("%d", &mac[i].anno);
+   }
+   
+    for(i=0;i<num;i++){
+        printf("Modello: %s, Anno: %d \n", mac[i].modello, mac[i].anno);
+}
+    return 0;
+}
