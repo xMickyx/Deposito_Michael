@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+// Definizione struct
+struct contatto{
+    char nome[30];
+    char telefono[15];
+};
+
+int main() {
+    
+    // Definire le variabili
+    char ricerca[30];
+    int num, i;
+    struct contatto rubrica[20];
+    
+    // L'utente decide quante persone inserire
+    printf("Quante persone vuoi inserire?: ");
+    scanf("%d", &num);
+    
+    // Memorizza i contatti in un array
+    for(i=0; i<num; i++){
+    printf("Persona %d \n", i+1);
+    printf("Nome: ");
+    scanf("%30s", &rubrica[i].nome);
+    printf("Telefono: ");
+    scanf("%15s", &rubrica[i].telefono);
+    }
+    
+    // L'utente cerca un nome nella rubrica
+    printf("Quale nome vuoi cercare?: ");
+    scanf("%30s", &ricerca);
+    for(i=0; i<num; i++){
+    if(rubrica[i].nome == ricerca){
+    printf("Il suo numero di telefono è: %15s", rubrica[i].telefono);
+    }else{
+    printf("Contatto non trovato");
+    }}
+    return 0;
+}
